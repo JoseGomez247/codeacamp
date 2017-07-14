@@ -1,0 +1,37 @@
+
+
+
+#titulo{
+  background-color: #0bd095;
+  border: 2px rgb(143, 255, 0) solid;
+   margin: 5px;
+   padding: 5px;
+}
+
+
+#divisor{
+  background-color:  #3171bd;
+  border: 2px rgb(13, 66, 223) solid;
+   margin: 5px;
+   padding: 5px;
+}
+
+
+#sub{
+  font: impact ;
+  color: #078bc3;
+  font-size: 2.5em;
+}
+#p1{
+  font: oblique bold 120% cursive;
+}
+
+#p2{
+  font-family: fantasy;
+  color: rgb(45, 214, 158);
+}
+
+
+#datos{
+margin-left: inherit;
+}
