@@ -1,0 +1,60 @@
+nav {
+  background-color: grey;
+}
+.container {
+position : absolute;
+left : 0;
+width : 100%;
+}
+.container ul {
+margin : 0 auto;
+width : 940px;
+list-style : none;
+}
+.container ul li {
+float : left;
+}
+.container ul li a {
+display : block;
+margin-right : 80px;
+width : 140px;
+font-size : 20px;
+line-height : 44px;
+text-align : center;
+text-decoration : none;
+color : white;
+}
+.container ul li a:hover {
+color :rgb(198, 4, 37);
+}
+.container ul li.selected a {
+color : #fff;
+}
+
+header {
+  background-color: black;
+}
+
+#logo {
+  display: block;
+  margin: 0 auto;
+}
+.content  {
+  width: 768px;
+  padding: 20px;
+  margin: auto;
+}
+.content .footer {
+  padding: 20px;
+}
+.footer {
+  width: 768px;
+  margin: auto;
+padding: 20px;
+}
+html {
+  padding: 20px;
+}
+body {
+  background-color: rgb(255, 255, 255);
+}
