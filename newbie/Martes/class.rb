@@ -16,60 +16,59 @@ class Dog
   end
 
 #-------Act.2-------
-  class cat
+  
+
+  obj_persa= Cat.new
+  obj_siames= Cat.new
+  obj_sphynx= Cat.new
+
+
+  class Car
   end
 
-  obj_persa= cat.new
-  obj_siames= cat.new
-  obj_sphynx= cat.new
+  obj_mustang= Car.new
+  obj_camaro= Car.new
+  obj_gt= Car.new
 
 
-  class car
+  class Window
   end
 
-  obj_mustang= car.new
-  obj_camaro= car.new
-  obj_gt= car.new
+  obj_fija= Window.new
+  obj_corredera= Window.new
+  obj_fija= Window.new
 
 
-  class window
+  class Water
   end
 
-  obj_fija= window.new
-  obj_corredera= window.new
-  obj_fija= window.new
+  obj_jamaica= Water.new
+  obj_limon= Water.new
+  obj_melon= Water.new
 
 
-  class water
+  class Fruit
   end
 
-  obj_jamaica= water.new
-  obj_limon= water.new
-  obj_melon= water.new
+  obj_manzana= Fruit.new
+  obj_lichie= Fruit.new
+  obj_uva= Fruit.new
 
 
-  class fruit
+  class Vegetable
   end
 
-  obj_manzana= fruit.new
-  obj_lichie= fruit.new
-  obj_uva= fruit.new
+  obj_zanahoria= Vegetable.new
+  obj_papa= Vegetable.new
+  obj_tomate= Vegetable.new
 
 
-  class vegetable
+  class Person
   end
 
-  obj_zanahoria= vegetable.new
-  obj_papa= vegetable.new
-  obj_tomate= vegetable.new
-
-
-  class person
-  end
-
-  obj_asiatico= person.new
-  obj_europeo= person.new
-  obj_africano= person.new
+  obj_asiatico= Person.new
+  obj_europeo= Person.new
+  obj_africano= Person.new
 
 
 
