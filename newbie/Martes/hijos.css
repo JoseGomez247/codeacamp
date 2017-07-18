@@ -1,0 +1,19 @@
+#ejemplo1 li > a{
+  color: blue;
+}
+#ejemplo1 li > em > a{
+  color: blue;
+}
+
+#ejemplo2 li > a{
+  color: green;
+}
+
+
+a[class= "menu"] {
+  color: green;
+}
+
+#hijos li > a{
+  color: orange;
+}
