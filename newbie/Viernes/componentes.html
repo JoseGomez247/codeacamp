@@ -10,55 +10,60 @@
 <link rel="stylesheet" type="text/css" href="componentes.css">
 <title>Componentes</title>
   </head>
-
 <body>
-  <p>hola</p>
-  <div class="container-fluid">
-       <!-- Fila con 2 columnas -->
-    <div class="row">
-        <div class="col-md-6">
-          <h1>Lorem</h1>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.  </p>
-          <p id= "p1"> <a class="btn btn-default" href="#" role="button"><font><font class="">Ver detalles "</font></font></a></p>
+  <div class= "jumbotron">
+    <div class= "container">
+      <h1>Hello, world!</h1>
+      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+      <p><a class="btn btn-primary btn-lg" href="https://elpais.com/tag/gatos/a" role="button">Learn more »</a></p>
+      <ul class="nav nav-pills" role="tablist">
+        <li id= "home" role="presentation" class="active"><a href="#">Home <span class="badge">42</span></a></li>
+        <li role="presentation"><a href="#">Profile</a></li>
+        <li role="presentation"><a href="#">Messages <span class="badge">3</span></a></li>
+        <div class= "container" id= "flt">
+        <div id= "datos">
+          <form id= "form_test">
+              <label for="email">Email adress:<br><input type="email"><br></input></label><br>
+              <label for="password">Password:<br><input type="password"><br></input></label><br>
+              <p> <a class="btn btn-default" href="#" role="button"><font><font class="butext">Sign in</font></font></a>  <a id= "btn2" class="btn btn-default" href="#" role="button"><font><font class="butext2">Register</font></font></a>
+              </p>
         </div>
-        <div class="col-md-6">
-          <h1>Lorem</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
         </div>
+
+      </ul>
     </div>
-        <!-- Fila con 1 columna grande de lado izquierdo y una chica de lado derecho -->
-    <div class="row">
-        <div class="col-md-8">
-          <h1>Lorem</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-        </div>
-        <div class="col-md-4">
-         <h2>Lorem</h2>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-        </div>
-    </div>
-       <!-- Fila con 1 columna usando todo el ancho-->
-    <div class="row">
-        <div class="col-md-12">
-          <h1>Lorem</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-        </div>
-    </div>
+  </div>
         <!-- Fila con 3 columnas del mismo tamaño-->
+        <div class= "container">
     <div class="row">
         <div class="col-md-4">
-          <h1>Lorem</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+          <img src="https://ep01.epimg.net/elpais/imagenes/2017/07/10/animalesycia/1499697898_365413_1499699069_miniatura_normal.jpg" width= "293.328">
+          <h2>Enseñaron los egipcios a los gatos a dominar el mundo?</h2>
+          <p>Un estudio de la revista 'Nature' plantea la opción de que la civilización modificó la conducta de los felinos domésticos</p>
+          <p> <a class="btn btn-default" href="https://elpais.com/elpais/2017/07/10/animalesycia/1499697898_365413.html" role="button"><font><font class="butext">Seguir leyendo »</font></font></a>  <a id= "btn2" class="btn btn-default" href="#" role="button"><font><font class="butext2">Compartir »</font></font></a>
+          </p>
         </div>
         <div class="col-md-4">
-          <h2>Lorem</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+          <img src="https://ep01.epimg.net/internacional/imagenes/2017/06/08/mundo_global/1496905694_554768_1496906045_miniatura_normal.jpg" width= "293.328">
+          <h2>Francia busca a un ‘asesino en serie’ de gatos</h2>
+          <p>La localidad de Saint-Pierre la Mer denuncia la muerte de hasta 200 mininos en un mes.
+            Piensan buscarlo y palearlo!! </p>
+          <p> <a class="btn btn-default" href="https://internacional.elpais.com/internacional/2017/06/08/mundo_global/1496905694_554768.html" role="button"><font><font class="butext">Seguir leyendo »</font></font></a>  <a id= "btn2" class="btn btn-default" href="#" role="button"><font><font class="butext2">Compartir »</font></font></a>
+          </p>
         </div>
         <div class="col-md-4">
-          <h3>Lorem</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+          <img src="https://ep01.epimg.net/elpais/imagenes/2017/05/18/videos/1495112503_774171_1495113086_miniatura_normal.jpg" width= "293.328">
+          <h2>Omar, el gato que aspira a ser el más grande del mundo</h2>
+          <p>El felino australiano, que mide 120 centímetros, podría conseguir un Record Guinness</p>
+          <p> <a class="btn btn-default" href="https://elpais.com/elpais/2017/05/18/videos/1495112503_774171.html" role="button"><font><font class="butext">Seguir leyendo »</font></font></a>  <a id= "btn2" class="btn btn-default" href="#" role="button"><font><font class="butext2">Compartir »</font></font></a>
+          </p>
         </div>
     </div>
+    <hr>
+    <footer>
+      <p>© 2017 Cat Company, Inc.</p>
+    </footer>
 </div>
+
 </body>
 </html>
