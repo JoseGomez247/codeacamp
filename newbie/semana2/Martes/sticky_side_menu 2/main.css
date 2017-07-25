@@ -1,0 +1,64 @@
+.container {
+  width: 720px;
+  float: left;
+}
+
+#buzz{
+  margin-left: 178px;
+}
+#que_hacemos{
+  margin-left: 178px;
+}
+#pricing{
+  margin-left: 178px;
+}
+
+#about{
+  margin-left: 178px;
+}
+
+#contact{
+  margin-left: 178px;
+}
+
+h1{
+margin-left: 178px;
+}
+
+#footer{
+  margin-left: 178px;
+}
+.nav{
+  height: 100%;
+  width: 150px;
+  background-color: rgb(197, 195, 200);
+  border-right: 2px;
+  position: fixed;
+  float: left;
+
+}
+.nav li{
+  border-bottom: 1px solid rgb(134, 134, 135);
+padding: 12px;
+}
+
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+}
+li a {
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+
+.nav li:hover {
+    background-color: #a3a2a2;
+}
