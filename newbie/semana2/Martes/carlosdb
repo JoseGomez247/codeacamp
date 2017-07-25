@@ -1,0 +1,101 @@
+CodeaCamp09s-Mac-mini:Martes codea_mac_09$ cat << EOF > ~/.sqliterc
+> .headers on
+> .mode column
+> EOF
+CodeaCamp09s-Mac-mini:Martes codea_mac_09$ sqlite3 ejemplo.db
+-- Loading resources from /Users/codea_mac_09/.sqliterc
+
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> CREATE TABLE usuarios (
+   ...>   id INTEGER PRIMARY KEY AUTOINCREMENT,
+   ...>   nombre VARCHAR(64) NOT NULL,
+   ...>   apellido  VARCHAR(64) NOT NULL,
+   ...>   email VARCHAR(128) UNIQUE NOT NULL,
+   ...>   fecha_nacimiento DATETIME NOT NULL,
+   ...>   genero VARCHAR(10) NOT NULL
+      ...> );
+   sqlite> INSERT INTO usuarios
+      ...>  (nombre, apellido, email, fecha_nacimiento, genero)
+      ...>  VALUES
+      ...>  ('Carlos', 'Ribero', 'carlos@yahoo.com', '1970-11-03', 'masculino');
+   sqlite> SELECT * FROM usuarios;
+   id          nombre      apellido    email             fecha_nacimiento  genero
+   ----------  ----------  ----------  ----------------  ----------------  ----------
+   1           Carlos      Ribero      carlos@yahoo.com  1970-11-03        masculino
+   sqlite> INSERT INTO usuarios
+      ...>  (nombre, apellido, email, fecha_nacimiento, genero)
+      ...>  VALUES
+      ...>  ('Pepe', 'Gomez', 'naruto.pp@hotmail.com', '2000-07-04', 'masculino');
+   sqlite> SELECT * FROM usuarios
+   ...> ;
+   id          nombre      apellido    email             fecha_nacimiento  genero
+   ----------  ----------  ----------  ----------------  ----------------  ----------
+   1           Carlos      Ribero      carlos@yahoo.com  1970-11-03        masculino
+   2           Pepe        Gomez       naruto.pp@hotmai  2000-07-04        masculino
+   sqlite> INSERT INTO usuarios
+      ...>  (nombre, apellido, email, fecha_nacimiento, genero)
+      ...>  VALUES
+      ...>  ('Carlos', 'Ribero', 'carlos@yahoo.com', '1970-11-03', 'masculino');
+   Error: UNIQUE constraint failed: usuarios.email
+   sqlite> ALTER TABLE usuarios
+      ...> ADD apodo VARCHAR(64) NOT NULL;
+   Error: Cannot add a NOT NULL column with default value NULL
+   sqlite> ALTER TABLE usuarios
+      ...> ADD apodo VARCHAR(64) NOT NULL;
+      Error: Cannot add a NOT NULL column with default value NULL
+      sqlite> ALTER TABLE usuarios
+         ...> ADD apodo VARCHAR(64) NOT NULL;
+      Error: Cannot add a NOT NULL column with default value NULL
+      sqlite> SELECT * FROM usuarios
+         ...> ;
+      id          nombre      apellido    email             fecha_nacimiento  genero
+      ----------  ----------  ----------  ----------------  ----------------  ----------
+      1           Carlos      Ribero      carlos@yahoo.com  1970-11-03        masculino
+      2           Pepe        Gomez       naruto.pp@hotmai  2000-07-04        masculino
+      sqlite> ALTER TABLE usuarios
+         ...> ADD apodo VARCHAR(64)
+         ...> NOT NULL;
+      Error: Cannot add a NOT NULL column with default value NULL
+      sqlite> ALTER TABLE usuarios
+      ...> ADD apodo VARCHAR(64);
+     sqlite> .schema
+     CREATE TABLE usuarios (
+       id INTEGER PRIMARY KEY AUTOINCREMENT,
+       nombre VARCHAR(64) NOT NULL,
+       apellido  VARCHAR(64) NOT NULL,
+       email VARCHAR(128) UNIQUE NOT NULL,
+       fecha_nacimiento DATETIME NOT NULL,
+       genero VARCHAR(10) NOT NULL
+     , apodo VARCHAR(64));
+     sqlite> UPDATE usuarios
+        ...> SET apodo = 'Charly'
+        ...> WHERE id = 1;
+     sqlite> UPDATE usuarios
+        ...> SET apodo = 'P.P.'
+        ...> WHERE id = 2;
+        sqlite> SELECT * FROM usuarios
+           ...> ;
+        id          nombre      apellido    email             fecha_nacimiento  genero      apodo
+        ----------  ----------  ----------  ----------------  ----------------  ----------  ----------
+        1           Carlos      Ribero      carlos@yahoo.com  1970-11-03        masculino   Charly
+        2           Pepe        Gomez       naruto.pp@hotmai  2000-07-04        masculino   P.P.
+        sqlite> UPDATE usuarios
+           ...> SET apellido = 'Rivero', fecha_nacimiento = 1980-11-03
+           ...> WHERE id = 1;
+        sqlite> SELECT * FROM usuarios
+           ...> ;
+        id          nombre      apellido    email             fecha_nacimiento  genero      apodo
+        ----------  ----------  ----------  ----------------  ----------------  ----------  ----------
+        1           Carlos      Rivero      carlos@yahoo.com  1966              masculino   Charly
+        2           Pepe        Gomez       naruto.pp@hotmai  2000-07-04        masculino   P.P.
+        sqlite> UPDATE usuarios
+           ...> SET apellido = 'Rivero', fecha_nacimiento = '1980-11-03'
+           ...> WHERE id = 1;
+        sqlite> SELECT * FROM usuarios
+           ...> ;
+        id          nombre      apellido    email             fecha_nacimiento  genero      apodo
+        ----------  ----------  ----------  ----------------  ----------------  ----------  ----------
+        1           Carlos      Rivero      carlos@yahoo.com  1980-11-03        masculino   Charly
+        2           Pepe        Gomez       naruto.pp@hotmai  2000-07-04        masculino   P.P.
+        sqlite>
