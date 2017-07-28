@@ -1,14 +1,11 @@
 class Computer
-  attr_accessor :mac
-  
-  def initialize(mac)
-  @mac = mac
-end
+  attr_accessor :color
 
-def color(cor= @mac)
-   cor
+  def initialize(color)
+  @color = color
 end
 end
 mac= Computer.new("Platinum")
 
-p mac.color("red")
+ mac.color="red"
+p mac.color

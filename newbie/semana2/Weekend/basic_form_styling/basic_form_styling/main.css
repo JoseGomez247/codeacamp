@@ -1,0 +1,70 @@
+.container {
+  margin: 0 auto;
+  width: 768px;
+}
+
+header {
+  background-color: black;
+}
+
+#logo {
+  display: block;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  float: left;
+}
+
+a {
+  background-color: #999;
+  color: white;
+  display: block;
+  width: 182px;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+}
+
+.main-title {
+  text-align: center;
+}
+
+.footer {
+  position: absolute;
+  top: 600px;
+  padding: 20px 0;
+}
+#registration{
+  background-color: rgb(217, 214, 213);
+  border-radius: 5px;
+  padding: 26px;
+}
+
+#registration_password{
+  margin-left: 55px;
+  width: 310px;
+}
+#registration_email{
+  width: 310px;
+}
+textarea{
+  width: 716px;
+}
+#telephon_number{
+  width: 703px;
+}
+.btn{
+  width: 716px;
+  background-color: rgb(10, 125, 189);
+}
+
+.btn:hover{
+  background-color: rgb(151, 152, 153)
+}

@@ -1,0 +1,42 @@
+
+
+ 1. Agrega a la tabla de Orders una nueva orden relacionándola con un cliente existente. Adicionalmente para esta nueva orden crea dos registros en la tabla de OrderDetails. Por ahora no importan los datos invéntalos.
+
+1.1 INSERT INTO Orders(OrderID, CustomerID, OrderDate, RequiredDate, ShippedDate)
+VALUES (21, 2, "2013-03-14", "2013-03-18", "2013-03-15")
+
+1.2 INSERT INTO OrderDetails(OrderDetailID)
+VALUES (48);
+UPDATE OrderDetails
+SET OrderID = 21, ProductID= 6, UnitPrice = 7.4, Quantity = 28
+WHERE OrderDetailID = 48;
+
+2. La empresa Floor Co. creará una nueva empresa y te esta pidiendo que las ordenes que hizo en 2013 se las asignes a esta nueva empresa. Para ello deberás:
+
+Primero crear un nuevo cliente en la tabla Customers. (Inventa los datos)
+Has una consulta para saber cuales son las ordenes de la empresa Floor Co.
+Finalmente deberás cambiar a las ordenes de 2013 su valor de CustomerID
+
+2.1 INSERT INTO Customers(CustomerID, CompanyName, ContactName, ContactTitle, Address, City, State)
+VALUES( 6, "Cesar Camp", "Cesar Garcia", "Installer", "22 Napoles", "Mexico City", "DF");
+
+2.2 SELECT Customers.CustomerID, COUNT(Orders.OrderID)
+FROM Customers, Orders
+WHERE Customers.CustomerID = Orders.CustomerID AND
+Customers.CompanyName = "Floor Co.";
+
+2.3 UPDATE Orders
+SET CustomerID = 6
+WHERE ( select strftime('%Y', OrderDate)) = '2013' AND CustomerID = 3;
+
+
+
+3.
+ DELETE FROM OrderDetails
+WHERE OrderID IN (13, 17);
+
+DELETE FROM Orders
+WHERE CustomerID = 5;
+
+DELETE FROM Customers
+WHERE CustomerID = 5;

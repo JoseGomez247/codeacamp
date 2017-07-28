@@ -146,14 +146,38 @@ CompanyName  COUNT(Orders.OrderID)
 Floor Co.    6
 
 -------------------------------------------
-5-
+5- La suma de todos los productos ordenados por cada compañía
 
-SELECT Customers.CompanyName,SUM(OrderDetails.Quantity)
-FROM Customers
-LEFT JOIN OrderDetails
-ON Orders.OrderID=OrderDetails.OrderID
-LEFT JOIN Orders
-ON Customers.CustomerID=Orders.CustomerID
+SELECT Customers.CompanyName,SUM(OrderDetails.Quantity) AS Total
+FROM Customers, Orders, OrderDetails
+WHERE Orders.OrderID=OrderDetails.OrderID AND
+Customers.CustomerID=Orders.CustomerID
 GROUP BY CompanyName
-HAVING sum(OrderDetails.Quantity)
-ORDER BY SUM(OrderDetails.Quantity) DESC
+ORDER BY Total DESC;
+
+-------------------------------------------------------
+6- Precio total de cada orden
+
+SELECT OrderID, SUM(Quantity * UnitPrice) AS Operation
+selecciono solo las columnas de una sola tabla
+multiplico el precio con las unidades para sacar el precio de cada unidad
+y los sumo para que me los sumo por ordenid
+FROM OrderDetails
+GROUP BY OrderID;
+
+--------------------------------------------
+
+7- Precio total de cada orden mayor a 1000
+
+SELECT OrderID, SUM(Quantity * UnitPrice) AS Operation
+FROM OrderDetails
+GROUP BY OrderID
+HAVING 1000 < Operation;
+
+----------------------------------------
+
+8- Cantidad de productos por cada orden
+
+SELECT OrderID, SUM(Quantity)
+FROM OrderDetails
+GROUP BY OrderID;
