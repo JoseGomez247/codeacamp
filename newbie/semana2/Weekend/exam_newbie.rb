@@ -45,7 +45,7 @@ def show_information(arr)
   puts
   arr.each { |x|
   print "|   #{x.name}".ljust(15) +  "| #{x.number}".ljust(15)  +"| #{x.expiration}".ljust(15)+"|    #{x.cvc}   |".ljust(15) + "#{x.status}        |".ljust(15)
-  puts
+
                 }
 end
 show_information(cards)
@@ -110,7 +110,8 @@ cyclist = Cyclist.new(70, 27)
 athletes = [runner, swimmer, cyclist]
 
 athletes.each do |athlete|
-  #¿qué tipo de atleta es?
+  #¿qué tipo de atleta es?puts "|   #{car5.name} |#{car1.car_lvl}  |"
+
   puts "#{athlete.class} responds to:"
   puts "\tAthlete speed: #{athlete.respond_to?(:speed) == true}"
   puts "\tGet Athlete time: #{athlete.respond_to?(:total_time) == true}"
@@ -146,6 +147,7 @@ p cyclist.ride_bike == "Rode 70 meters, time: 27 seconds, speed: 2.59 m/s"
 
 #RaceCar class
 class RaceCar
+  attr_accessor :name
   LAP_DISTANCE = 100
 def initialize(name, times)
 @name = name
@@ -163,20 +165,20 @@ end
   #método que muestra nivel de cada race car
 def car_lvl
 if average_speed < 9
-  "El carro #{@name} es nivel Avanzado"
+  "Avanzado"
 elsif average_speed < 10
-  "El carro #{@name} es nivel Medio"
+  "Medio"
 elsif average_speed < 12
-  "El carro #{@name} es nivel Normal"
+  "Normal"
 else
-  "El carro #{@name} es nivel Principiante"
+  "Principiante"
 end
 end
 end
 
 #Team class
 class Team
-
+attr_accessor :team
   def initialize(team)
     @team= team
   end
@@ -201,9 +203,12 @@ class Team
 end
 
 #método para buscar race car
-
-
-#método para generar la tabla
+def search(namecar, teamfinal)
+  flag= false
+finalteam=teamfinal.team
+finalteam.each{|x|flag=true if x.name == namecar}
+"#{namecar} is a racer" if flag == true
+end
 
 
 #método para mostrar nombre y nivel del race car
@@ -217,6 +222,9 @@ car3 = RaceCar.new("Passwater", [37, 77, 36, 30])
 car4 = RaceCar.new("Banjo", [9, 18, 70, 5])
 car5 = RaceCar.new("Duck", [40, 57, 56, 90])
 car6 = RaceCar.new("Cesar", [36, 56, 28, 30])
+
+#método para generar la tabla
+
 
 #tests
 
@@ -238,7 +246,7 @@ team1 = [car1, car2, car3, car4, car5]
 team_one = Team.new(team1)
 
 #test para buscar race car en equipo team_one
-#p search("Power", team_one) == "Power is a racer"
+p search("Power", team_one) == "Power is a racer"
 
 p team_one.add_car(car6)
 
@@ -247,3 +255,53 @@ p team_one.average_speed_of_team
 #ej. 10.66
 
 #método para mostrar nombre y nivel del race car
+def table(team1)
+  print "|    Name".ljust(15) + "|    Nivel        |".ljust(15)
+  puts
+  puts "------------------------------------"
+
+  fteam= team1.team
+  fteam.each {|x|
+print"|   #{x.name}".ljust(15) + "|     #{x.car_lvl}    |".ljust(15)
+puts
+}
+end
+table(team_one)
+
+#---------------------------------------------------------------------------------------------------------------
+class Playlist
+  attr_reader :name
+  def initialize(name, songs)
+    @name = name
+    @songs= songs
+    @contador = 0
+  end
+  def number_of_songs
+    @songs.count
+  end
+  def add_song(song_new)
+    @songs << song_new
+  end
+  def next_song
+    cancion=""
+  if @contador == @songs.length
+    @contador=0
+  cancion<<@songs[@contador]
+  else
+  cancion<<@songs[@contador]
+  end
+@contador +=1
+cancion
+  end
+end
+playlist1 = Playlist.new("Rock", ["zombie", "unforgiven", "ghost", "imagine"])
+p playlist1.name
+p playlist1.number_of_songs
+p playlist1.add_song("seven")
+p playlist1.next_song
+p playlist1.next_song
+p playlist1.next_song
+p playlist1.next_song
+p playlist1.next_song
+p playlist1.next_song
+p playlist1.next_song

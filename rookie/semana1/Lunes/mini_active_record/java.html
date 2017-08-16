@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+ <head>
+   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/roboto.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material-fullpalette.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/ripples.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/material.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/ripples.min.js"></script>
+     <link rel="stylesheet" href="java.css">
+<link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+   <script language='javascript'>
+   function suma(){
+     n1=document.formulario.num1.value
+     n2=document.formulario.num2.value
+     console.log(n1);
+     console.log(n2);
+
+    res=parseInt(n1)+parseInt(n2);
+
+    document.formulario.resul.value=res
+
+   }
+   </script>
+ </head>
+ <body>
+   <!--                          Jumbotron                                          -->
+
+   <div class="jumbotron">
+     <h2 class="display-3"><span style="color: rgb(255, 200, 66);">{Codea</span><span  style="color: white;">Camp</span><span style="color: rgb(255, 200, 66);">}</span></h2>
+     <form name=formulario method=POST>
+
+       <div class="row top">
+         <label class= "col-md-12 l1" name=lblnum1>Numero 1:</label>
+         <input class= "col-md-12 i1" type=text id='num1'/>
+
+       </div>
+<div class="row top">
+  <label class= "col-md-12 l1" name=lblnum2>Numero 2:</label>
+  <input class= "col-md-12 i1" type=text id='num2'/>
+
+</div>
+
+       <a class="btn btn-info btn-lg top top2" href="#" onclick="suma()">+</a>
+<div class="row top">
+  <input class= "i2" type=text id='resul'/>
+
+</div>
+     </form>
+     </p>
+   </div>
+
+
+
+
+   <!--                          formulario                                           -->
+
+ </body>
+ </html>

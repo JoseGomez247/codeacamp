@@ -1,0 +1,31 @@
+.jumbotron {
+  text-align: center;
+  width: 400px;
+  height: 500px;
+  margin-left: 453px;
+  margin-top: 75px;
+  background-color: rgba(60, 58, 58, 0.83)!important;
+  border-radius: 7px!important;
+}
+.top{
+  margin-top: 40px;
+}
+.l1{
+  text-align: left;
+  margin-left: 84px;
+  color: white;
+}
+.i1{
+  width: 200px;
+  margin-left: 98px;
+  text-align: center;
+}
+
+.i2{
+  width: 200px;
+  text-align: center;
+}
+
+.top2{
+  width: 140px;
+}

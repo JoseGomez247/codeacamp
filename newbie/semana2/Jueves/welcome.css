@@ -1,0 +1,93 @@
+html{
+  background-color: rgb(66, 65, 65)!important;
+}
+.tt{
+  font-family: 'Sedgwick Ave Display', cursive;
+  color: rgb(245, 78, 6)!important;
+}
+
+.jumbotron{
+  text-align: center;
+}
+.price{
+  text-decoration: line-through;
+  color: grey;
+}
+#st_pk{
+  padding-bottom: 5px;
+}
+.free_shipping{
+  color: rgb(21, 167, 3);
+  float: right;
+}
+
+.valid_coupons{
+  color: rgb(5, 171, 208);
+  float: right;
+}
+
+
+.new_price{
+  color: rgb(255, 23, 0);
+}
+.discount{
+  color: rgb(255, 23, 0);
+  text-align: right;
+}
+.rounded{
+  width: 265px;
+  margin: 0;
+}
+/*.jumbotron{
+  background: rgba(20, 20, 20, 0.89);
+  color: white;
+}*/
+.estilo{
+  background-color: rgb(245, 78, 6);
+  color: rgb(255, 255, 255);
+}
+.estilo:hover{
+  background-color: rgb(145, 142, 140);
+}
+.infor{
+  background-color: #25567e!important;
+  color: rgb(255, 255, 255);
+}
+
+
+.infor:hover{
+  background-color: rgb(145, 142, 140)!important;
+}
+
+
+.espacios{
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+
+
+
+h1{
+  font-family: fantasy;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+footer{
+  z-index: 2;
+  text-align: center;
+  align-items: center;
+  font-family: 'Sedgwick Ave Display', cursive;
+}
+
+
+.boton{
+margin-left: 50px;
+}
+
+
+.btn_1{
+  margin-top: 40px;
+}
